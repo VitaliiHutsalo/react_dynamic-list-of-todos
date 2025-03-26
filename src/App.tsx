@@ -11,7 +11,7 @@ import { getTodos } from './api';
 import { Todo } from './types/Todo';
 import { TodoStyles } from './components/TodoStyles';
 
-export const App: React.FC<TodoStyles> = () => {
+export const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [selectedTodo, setSelectedTodo] = useState<Todo | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -33,7 +33,6 @@ export const App: React.FC<TodoStyles> = () => {
         case TodoStyles.COMPLETED:
           return todo.completed;
         default:
-        case TodoStyles.ALL:
           return true;
       }
     })

@@ -6,7 +6,7 @@ import { getUser } from '../../api';
 
 type Props = {
   todo: Todo;
-  onClear: (value: string) => void;
+  onClear: Todo | null;
 };
 
 export const TodoModal: React.FC<Props> = ({ todo, onClear }) => {
